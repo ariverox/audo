@@ -1,0 +1,51 @@
+{
+  "manifest_version": 2,
+  "name": "Audo",
+  "version": "1.0",
+
+
+  "description": "Voice commands to help you navigate the web",
+  "icons": {
+    "48": "mic2.png",
+    "128": "mic2.png"
+  },
+
+
+  "browser_action": {
+    "default_icon": {
+      "19": "mic2.png",
+      "38": "mic2.png"
+    },
+    "default_title": "Audo"
+
+  },
+  "permissions": ["tabs",
+    "activeTab",
+    "tabCapture",
+    "audio",
+    "tts",
+    "http://www.google.com/",
+    "https://www.google.com/",
+    "ttsEngine",
+    "http://devdocs.io/",
+    "https://ajax.googleapis.com/",
+    "http://*/",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "tts_engine": {
+    "voices": [{
+      "voice_name": "Google US English",
+      "lang": "en-US",
+      "event_types": ["start", "marker", "end"]
+    }, {
+      "voice_name": "Pat",
+      "lang": "en-US",
+      "event_types": ["end"]
+    }]
+  },
+  "background": {
+    "scripts": ["background.js"]
+  }
+
+}
